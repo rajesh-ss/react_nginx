@@ -18,16 +18,18 @@ const router = createBrowserRouter([
         path: "demo",
         element:<>I am lucky it works fine, hurray</>,
       },
+      {
+        path: 'party',
+        element: <>It works Bro </>
+      }
     ],
   },
-  {
-    path: 'party',
-    element: <>It works Bro </>
-  }
+
 ],
 {
   basename: "/app1/",
-});
+}
+);
 
 
 
