@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  react_app1:
+    build: ./react_app1
+    ports:
+      - "3000:80"
+    # networks:
+    #   - my_network
+
+  react_app2:
+    build: ./react_app2
+    ports:
+      - "4000:80"
+    # networks:
+    #   - my_network
+
+  nginx:
+    build: ./nginx
+    # volumes:
+    #   - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
+    restart: always
+    # networks:
+    #   - my_network
+
+# networks:
+#   my_network:
